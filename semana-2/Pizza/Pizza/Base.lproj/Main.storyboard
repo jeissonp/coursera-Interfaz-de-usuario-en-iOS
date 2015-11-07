@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rk2-mp-sVd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tamaño-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rD-ix-8oU">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Nfn-34-YEp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8bb-Ws-RVO"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7rD-ix-8oU" secondAttribute="trailing" constant="-20" id="qvD-Bh-RK0"/>
+                            <constraint firstItem="7rD-ix-8oU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tLo-VZ-dSM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tamaño" id="4Rg-fj-y50">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="82d-Ck-tn3">
+                            <connections>
+                                <segue destination="ZcC-tR-nEy" kind="push" id="DRc-sB-AZB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="308"/>
+        </scene>
+        <!--Masa-->
+        <scene sceneID="gih-Vx-6LE">
+            <objects>
+                <viewController id="ZcC-tR-nEy" customClass="TipoMasaViewController" customModule="Pizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Kf-Sx-sbs"/>
+                        <viewControllerLayoutGuide type="bottom" id="1gg-Gg-w5V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fOi-7k-qui">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgd-Nk-2Wm">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZcC-tR-nEy" id="CTY-Iq-6va"/>
+                                    <outlet property="delegate" destination="ZcC-tR-nEy" id="Dcl-kF-w3Z"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kgd-Nk-2Wm" firstAttribute="leading" secondItem="fOi-7k-qui" secondAttribute="leadingMargin" constant="-20" id="tBW-Dd-Gxn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kgd-Nk-2Wm" secondAttribute="trailing" constant="-20" id="z1Z-OG-19b"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Masa" id="ogM-0V-PVd">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="CB5-7H-wYm">
+                            <connections>
+                                <segue destination="zaN-d9-g2B" kind="push" id="5XM-ju-bvd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0f-wF-MTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1243" y="308"/>
+        </scene>
+        <!--Queso-->
+        <scene sceneID="Acj-eb-g99">
+            <objects>
+                <viewController id="zaN-d9-g2B" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jYS-Q7-4UR"/>
+                        <viewControllerLayoutGuide type="bottom" id="56K-wf-WtT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pL2-MP-Gnd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rI9-RN-eRB">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                                <animations/>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rI9-RN-eRB" secondAttribute="trailing" constant="-20" id="Dmf-2U-ATe"/>
+                            <constraint firstItem="rI9-RN-eRB" firstAttribute="leading" secondItem="pL2-MP-Gnd" secondAttribute="leadingMargin" constant="-20" id="GAV-JF-M30"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Queso" id="0VZ-XW-ytq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1u-6J-ub9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="308"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YR9-Me-Lsh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rk2-mp-sVd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VCw-sQ-GWT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ECA-ks-JQg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNH-L4-YbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="308"/>
+        </scene>
+    </scenes>
+</document>
