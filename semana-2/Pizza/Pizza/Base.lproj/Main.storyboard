@@ -168,6 +168,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="P1T-QH-hbw" kind="push" identifier="toSummary" id="Kfw-sq-ypy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSG-Ja-yEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +179,7 @@
         <!--Resumen Pédido-->
         <scene sceneID="PWc-Za-DBE">
             <objects>
-                <viewController id="P1T-QH-hbw" sceneMemberID="viewController">
+                <viewController id="P1T-QH-hbw" customClass="ResumenViewController" customModule="Pizza" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uoU-Ka-5t0"/>
                         <viewControllerLayoutGuide type="bottom" id="A8M-VK-OTR"/>
@@ -185,20 +188,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp8-la-es8">
-                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp8-la-es8">
+                                <rect key="frame" x="20" y="273" width="280" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mp8-la-es8" firstAttribute="leading" secondItem="Slr-76-otc" secondAttribute="leadingMargin" id="4GO-bf-xnE"/>
+                            <constraint firstItem="Mp8-la-es8" firstAttribute="trailing" secondItem="Slr-76-otc" secondAttribute="trailingMargin" id="Nek-6I-SvD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Resumen Pédido" id="1Oo-Dv-pZw">
-                        <barButtonItem key="rightBarButtonItem" title="OK" id="ZsV-dC-A36"/>
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="ZsV-dC-A36">
+                            <connections>
+                                <action selector="okOrder:" destination="P1T-QH-hbw" id="WzO-pw-9JA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="summaryLabel" destination="Mp8-la-es8" id="Nsl-z2-dgN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVK-Ia-s10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -54,7 +54,15 @@ class IngredienteTableViewController: UITableViewController {
     }
     
     @IBAction func nextStep(sender: AnyObject) {
-        
+        if tableView.indexPathsForSelectedRows?.count > 0 && tableView.indexPathsForSelectedRows?.count <= 5 {
+            performSegueWithIdentifier("toSummary", sender: self)
+        }
+        else {
+            let alert = UIAlertController(title: "Advertencia", message: "Debe seleccionar de 1 a 5 ingredientes", preferredStyle: .Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
 
     /*
@@ -92,14 +100,25 @@ class IngredienteTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let destination = segue.destinationViewController as! ResumenViewController
+        var text:[String] = []
+        if let indexPaths = tableView.indexPathsForSelectedRows {
+            for var i = 0; i < indexPaths.count; ++i {
+                text.append(mix[indexPaths[i].row])
+            }
+        }
+        
+        let mixFinal = text.joinWithSeparator(",")
+
+        destination.summary = summary + "Ingredientes: (\(mixFinal))"
     }
-    */
+    
 
 }
