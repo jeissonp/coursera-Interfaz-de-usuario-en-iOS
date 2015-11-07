@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Tamaño-->
+        <!--Tamaño 1 de 4 -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pizza" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,19 +34,22 @@
                             <constraint firstItem="7rD-ix-8oU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tLo-VZ-dSM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tamaño" id="4Rg-fj-y50">
+                    <navigationItem key="navigationItem" title="Tamaño 1 de 4 " id="4Rg-fj-y50">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="82d-Ck-tn3">
                             <connections>
                                 <segue destination="ZcC-tR-nEy" kind="push" id="DRc-sB-AZB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sizePicker" destination="7rD-ix-8oU" id="fBY-Df-v0H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="681" y="308"/>
         </scene>
-        <!--Masa-->
+        <!--Masa 2 de 4-->
         <scene sceneID="gih-Vx-6LE">
             <objects>
                 <viewController id="ZcC-tR-nEy" customClass="TipoMasaViewController" customModule="Pizza" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,22 +77,25 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kgd-Nk-2Wm" secondAttribute="trailing" constant="-20" id="z1Z-OG-19b"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Masa" id="ogM-0V-PVd">
+                    <navigationItem key="navigationItem" title="Masa 2 de 4" id="ogM-0V-PVd">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="CB5-7H-wYm">
                             <connections>
                                 <segue destination="zaN-d9-g2B" kind="push" id="5XM-ju-bvd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="volumePicker" destination="kgd-Nk-2Wm" id="azP-ev-N8A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0f-wF-MTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1243" y="308"/>
         </scene>
-        <!--Queso-->
+        <!--Queso 3 de 4-->
         <scene sceneID="Acj-eb-g99">
             <objects>
-                <viewController id="zaN-d9-g2B" sceneMemberID="viewController">
+                <viewController id="zaN-d9-g2B" customClass="TipoQuesoViewController" customModule="Pizza" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jYS-Q7-4UR"/>
                         <viewControllerLayoutGuide type="bottom" id="56K-wf-WtT"/>
@@ -101,6 +107,10 @@
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rI9-RN-eRB">
                                 <rect key="frame" x="0.0" y="176" width="320" height="216"/>
                                 <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zaN-d9-g2B" id="M5g-IE-aYd"/>
+                                    <outlet property="delegate" destination="zaN-d9-g2B" id="4aB-4S-1l7"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <animations/>
@@ -110,11 +120,89 @@
                             <constraint firstItem="rI9-RN-eRB" firstAttribute="leading" secondItem="pL2-MP-Gnd" secondAttribute="leadingMargin" constant="-20" id="GAV-JF-M30"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Queso" id="0VZ-XW-ytq"/>
+                    <navigationItem key="navigationItem" title="Queso 3 de 4" id="0VZ-XW-ytq">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="0L9-ma-tKj">
+                            <connections>
+                                <segue destination="Ae5-Mz-DG2" kind="push" id="h41-MJ-vUW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cheesePicker" destination="rI9-RN-eRB" id="4kU-SW-uzM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1u-6J-ub9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1851" y="308"/>
+        </scene>
+        <!--Ingredientes 4 de 4-->
+        <scene sceneID="q5U-NN-NhN">
+            <objects>
+                <tableViewController id="Ae5-Mz-DG2" customClass="IngredienteTableViewController" customModule="Pizza" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fHQ-nr-lbq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="DM2-28-91E">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DM2-28-91E" id="V1Y-dn-Z6B">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ae5-Mz-DG2" id="eCR-Cg-pFW"/>
+                            <outlet property="delegate" destination="Ae5-Mz-DG2" id="F9U-1W-t1l"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ingredientes 4 de 4" id="4ZM-65-fwl">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="TXn-o5-T23">
+                            <connections>
+                                <action selector="nextStep:" destination="Ae5-Mz-DG2" id="frK-Gf-WNQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSG-Ja-yEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2327" y="308"/>
+        </scene>
+        <!--Resumen Pédido-->
+        <scene sceneID="PWc-Za-DBE">
+            <objects>
+                <viewController id="P1T-QH-hbw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uoU-Ka-5t0"/>
+                        <viewControllerLayoutGuide type="bottom" id="A8M-VK-OTR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Slr-76-otc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp8-la-es8">
+                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Resumen Pédido" id="1Oo-Dv-pZw">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="ZsV-dC-A36"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVK-Ia-s10" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2899" y="308"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YR9-Me-Lsh">

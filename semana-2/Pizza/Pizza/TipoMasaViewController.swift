@@ -11,6 +11,10 @@ import UIKit
 class TipoMasaViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let volume = ["delgada", "crujiente", "gruesa"]
+    var summary: String = ""
+    
+    @IBOutlet weak var volumePicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,14 +40,19 @@ class TipoMasaViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let destination = segue.destinationViewController as! TipoQuesoViewController
+        
+        destination.summary = summary + " con masa: \(volume[volumePicker.selectedRowInComponent(0)]), "
+        
+        
     }
-    */
+    
 
 }

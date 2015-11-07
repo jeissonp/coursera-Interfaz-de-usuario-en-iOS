@@ -14,6 +14,7 @@
 		DE7FFC691BEE5CBA00EB2FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE7FFC671BEE5CBA00EB2FAA /* LaunchScreen.storyboard */; };
 		DE7FFC711BEE60A300EB2FAA /* TipoMasaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FFC701BEE60A300EB2FAA /* TipoMasaViewController.swift */; };
 		DE7FFC731BEE61FA00EB2FAA /* TipoQuesoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FFC721BEE61FA00EB2FAA /* TipoQuesoViewController.swift */; };
+		DE7FFC751BEE65DA00EB2FAA /* IngredienteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FFC741BEE65DA00EB2FAA /* IngredienteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DE7FFC6A1BEE5CBA00EB2FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE7FFC701BEE60A300EB2FAA /* TipoMasaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMasaViewController.swift; sourceTree = "<group>"; };
 		DE7FFC721BEE61FA00EB2FAA /* TipoQuesoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoQuesoViewController.swift; sourceTree = "<group>"; };
+		DE7FFC741BEE65DA00EB2FAA /* IngredienteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredienteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DE7FFC6A1BEE5CBA00EB2FAA /* Info.plist */,
 				DE7FFC701BEE60A300EB2FAA /* TipoMasaViewController.swift */,
 				DE7FFC721BEE61FA00EB2FAA /* TipoQuesoViewController.swift */,
+				DE7FFC741BEE65DA00EB2FAA /* IngredienteTableViewController.swift */,
 			);
 			path = Pizza;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				DE7FFC731BEE61FA00EB2FAA /* TipoQuesoViewController.swift in Sources */,
 				DE7FFC711BEE60A300EB2FAA /* TipoMasaViewController.swift in Sources */,
+				DE7FFC751BEE65DA00EB2FAA /* IngredienteTableViewController.swift in Sources */,
 				DE7FFC611BEE5CBA00EB2FAA /* ViewController.swift in Sources */,
 				DE7FFC5F1BEE5CBA00EB2FAA /* AppDelegate.swift in Sources */,
 			);
