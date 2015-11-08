@@ -37,9 +37,11 @@ class IngredienteInterfaceController: WKInterfaceController {
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         let row = table.rowControllerAtIndex(rowIndex) as! Item
         if row.isSelect {
+            row.titleMix.setTextColor(UIColor.whiteColor())
             row.isSelect = false
         }
         else {
+            row.titleMix.setTextColor(UIColor.greenColor())
             row.isSelect = true
         }
     }
