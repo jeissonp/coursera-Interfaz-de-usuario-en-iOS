@@ -14,7 +14,7 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet var sizePicker: WKInterfacePicker!
     let sizes = ["chica", "mediana", "grande"]
-    
+    var index:Int = 0
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         var pickerItems: [WKPickerItem] = []
@@ -30,6 +30,15 @@ class InterfaceController: WKInterfaceController {
         // Configure interface objects here.
     }
 
+    @IBAction func nextStep() {
+        //print(sizePicker.)
+        self.pushControllerWithName("tipoMasa", context: "Pizza: " + sizes[index] + ", ")
+    }
+    
+    @IBAction func select(value: Int) {
+        index = value
+    }
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

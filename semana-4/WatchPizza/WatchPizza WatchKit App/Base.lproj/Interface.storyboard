@@ -13,8 +13,16 @@
                         <label width="131.5" alignment="left" text="Tamaño" textAlignment="center" id="m8h-fm-rVm">
                             <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <picker height="84" alignment="left" id="S33-do-r6B"/>
-                        <button width="1" alignment="left" title="Siguiente" id="4QK-eU-yYN"/>
+                        <picker height="84" alignment="left" focusStyle="stack" id="S33-do-r6B">
+                            <connections>
+                                <action selector="select:" destination="AgC-eL-Hgc" id="2lT-8G-gQU"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Siguiente" id="4QK-eU-yYN">
+                            <connections>
+                                <action selector="nextStep" destination="AgC-eL-Hgc" id="GKx-v2-ScS"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="sizePicker" destination="S33-do-r6B" id="iug-qo-vBI"/>
@@ -23,16 +31,24 @@
             </objects>
             <point key="canvasLocation" x="210" y="246"/>
         </scene>
-        <!--Tipo Masa Interface Controller-->
+        <!--tipoMasa-->
         <scene sceneID="EBG-ja-HNS">
             <objects>
-                <controller id="E0Y-wU-8QV" customClass="TipoMasaInterfaceController" customModule="WatchPizza_WatchKit_Extension">
+                <controller identifier="tipoMasa" id="E0Y-wU-8QV" customClass="TipoMasaInterfaceController" customModule="WatchPizza_WatchKit_Extension">
                     <items>
                         <label width="131.5" alignment="left" text="Masa" textAlignment="center" id="HYL-vg-t4C">
                             <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <picker height="84" alignment="left" id="hSi-vo-uwu"/>
-                        <button width="1" alignment="left" title="Siguiente" id="G6h-pK-h9p"/>
+                        <picker height="84" alignment="left" focusStyle="stack" id="hSi-vo-uwu">
+                            <connections>
+                                <action selector="select:" destination="E0Y-wU-8QV" id="7Sp-sm-kdD"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Siguiente" id="G6h-pK-h9p">
+                            <connections>
+                                <action selector="nextStep" destination="E0Y-wU-8QV" id="O7a-iX-5Ly"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="picker" destination="hSi-vo-uwu" id="hq4-Y6-8jL"/>
@@ -41,27 +57,85 @@
             </objects>
             <point key="canvasLocation" x="423" y="246"/>
         </scene>
-        <!--Interface Controller-->
+        <!--tipoQueso-->
         <scene sceneID="HeR-cP-DWp">
             <objects>
-                <controller id="OFX-8C-YTz">
+                <controller identifier="tipoQueso" id="OFX-8C-YTz" customClass="TipoQuesoInterfaceController" customModule="WatchPizza_WatchKit_Extension">
                     <items>
                         <label width="131.5" alignment="left" text="Queso" textAlignment="center" id="eK7-XD-6II">
                             <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
-                        <picker height="84" alignment="left" id="03Q-rK-7FD"/>
-                        <button width="1" alignment="left" title="Siguiente" id="7e4-E0-8LN"/>
+                        <picker height="84" alignment="left" focusStyle="stack" id="03Q-rK-7FD">
+                            <connections>
+                                <action selector="select:" destination="OFX-8C-YTz" id="kkQ-OF-69A"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Siguiente" id="7e4-E0-8LN">
+                            <connections>
+                                <action selector="nextStep" destination="OFX-8C-YTz" id="L38-0Q-MWR"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="picker" destination="03Q-rK-7FD" id="QC7-Dl-v12"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="638" y="246"/>
         </scene>
-        <!--Interface Controller-->
+        <!--ingredientes-->
         <scene sceneID="PD8-28-bl0">
             <objects>
-                <controller id="KNu-D3-wba"/>
+                <controller identifier="ingredientes" id="KNu-D3-wba" customClass="IngredienteInterfaceController" customModule="WatchPizza_WatchKit_Extension">
+                    <items>
+                        <label width="132.5" alignment="left" text="Ingredientes" textAlignment="center" id="4qk-7h-v3M">
+                            <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <table alignment="left" id="iqc-F0-2Gs">
+                            <items>
+                                <tableRow identifier="item" id="k9F-dv-eqP" customClass="Item" customModule="WatchPizza_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Bd0-8h-pmg">
+                                        <items>
+                                            <label width="132.5" height="73.5" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="72p-lS-Je0"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleMix" destination="72p-lS-Je0" id="Htg-E7-hiE"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Siguiente" id="yET-4z-D3l">
+                            <connections>
+                                <action selector="nextStep" destination="KNu-D3-wba" id="scw-KC-9E3"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="iqc-F0-2Gs" id="Cl0-Xp-Slg"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="844" y="246"/>
+        </scene>
+        <!--confirmacion-->
+        <scene sceneID="Wmi-cm-dVL">
+            <objects>
+                <controller identifier="confirmacion" id="vWe-Ex-ftP" customClass="ConfirmacionInterfaceController" customModule="WatchPizza_WatchKit_Extension">
+                    <items>
+                        <label width="134.5" alignment="left" text=" Label Label Label Label Label" textAlignment="center" numberOfLines="0" id="A0F-DN-PvH"/>
+                        <button width="1" alignment="left" title="Confirmar" id="ehV-bx-t1l">
+                            <connections>
+                                <action selector="confirmOrder" destination="vWe-Ex-ftP" id="5rf-Vr-1x2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="summary" destination="A0F-DN-PvH" id="way-D5-rYa"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1036" y="246"/>
         </scene>
     </scenes>
 </document>

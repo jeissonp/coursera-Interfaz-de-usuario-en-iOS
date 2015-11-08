@@ -21,6 +21,9 @@
 		DE8F591D1BEFAE5D00E5110E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8F591C1BEFAE5D00E5110E /* Assets.xcassets */; };
 		DE8F592D1BEFB46A00E5110E /* TipoMasaInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F592C1BEFB46A00E5110E /* TipoMasaInterfaceController.swift */; };
 		DE8F592F1BEFB74600E5110E /* TipoQuesoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F592E1BEFB74600E5110E /* TipoQuesoInterfaceController.swift */; };
+		DE8F59311BEFC7F800E5110E /* IngredienteInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F59301BEFC7F800E5110E /* IngredienteInterfaceController.swift */; };
+		DE8F59331BEFC81D00E5110E /* ConfirmacionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F59321BEFC81D00E5110E /* ConfirmacionInterfaceController.swift */; };
+		DE8F59351BEFC9F500E5110E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F59341BEFC9F500E5110E /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		DE8F591E1BEFAE5D00E5110E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8F592C1BEFB46A00E5110E /* TipoMasaInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoMasaInterfaceController.swift; sourceTree = "<group>"; };
 		DE8F592E1BEFB74600E5110E /* TipoQuesoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoQuesoInterfaceController.swift; sourceTree = "<group>"; };
+		DE8F59301BEFC7F800E5110E /* IngredienteInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredienteInterfaceController.swift; sourceTree = "<group>"; };
+		DE8F59321BEFC81D00E5110E /* ConfirmacionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmacionInterfaceController.swift; sourceTree = "<group>"; };
+		DE8F59341BEFC9F500E5110E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,9 @@
 				DE8F591E1BEFAE5D00E5110E /* Info.plist */,
 				DE8F592C1BEFB46A00E5110E /* TipoMasaInterfaceController.swift */,
 				DE8F592E1BEFB74600E5110E /* TipoQuesoInterfaceController.swift */,
+				DE8F59301BEFC7F800E5110E /* IngredienteInterfaceController.swift */,
+				DE8F59341BEFC9F500E5110E /* Item.swift */,
+				DE8F59321BEFC81D00E5110E /* ConfirmacionInterfaceController.swift */,
 			);
 			path = "WatchPizza WatchKit Extension";
 			sourceTree = "<group>";
@@ -303,6 +312,9 @@
 			files = (
 				DE8F592D1BEFB46A00E5110E /* TipoMasaInterfaceController.swift in Sources */,
 				DE8F591B1BEFAE5D00E5110E /* ExtensionDelegate.swift in Sources */,
+				DE8F59311BEFC7F800E5110E /* IngredienteInterfaceController.swift in Sources */,
+				DE8F59331BEFC81D00E5110E /* ConfirmacionInterfaceController.swift in Sources */,
+				DE8F59351BEFC9F500E5110E /* Item.swift in Sources */,
 				DE8F59191BEFAE5D00E5110E /* InterfaceController.swift in Sources */,
 				DE8F592F1BEFB74600E5110E /* TipoQuesoInterfaceController.swift in Sources */,
 			);
